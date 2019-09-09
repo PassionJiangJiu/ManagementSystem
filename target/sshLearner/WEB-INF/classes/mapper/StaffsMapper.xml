@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.StaffsMapper" >
+  <resultMap id="BaseResultMap" type="com.pojo.Staffs" >
+    <id column="ID" property="id" jdbcType="INTEGER" />
+    <result column="StaffID" property="staffid" jdbcType="VARCHAR" />
+    <result column="StaffName" property="staffname" jdbcType="VARCHAR" />
+    <result column="SexID" property="sexid" jdbcType="INTEGER" />
+    <result column="JobID" property="jobid" jdbcType="VARCHAR" />
+    <result column="GradeID" property="gradeid" jdbcType="VARCHAR" />
+    <result column="EduBackgroundID" property="edubackgroundid" jdbcType="INTEGER" />
+    <result column="Birthday" property="birthday" jdbcType="VARCHAR" />
+    <result column="NativePlace" property="nativeplace" jdbcType="VARCHAR" />
+    <result column="FamilyAddress" property="familyaddress" jdbcType="VARCHAR" />
+    <result column="IDcard" property="idcard" jdbcType="VARCHAR" />
+    <result column="Tel" property="tel" jdbcType="VARCHAR" />
+    <result column="Major" property="major" jdbcType="VARCHAR" />
+    <result column="EmployedDate" property="employeddate" jdbcType="TIMESTAMP" />
+    <result column="Salary" property="salary" jdbcType="VARCHAR" />
+  </resultMap>
+<!--  联合查询-->
+  <resultMap id="WithAllResultMap" type="com.pojo.Staffs">
+    <id column="ID" property="id" jdbcType="INTEGER" />
+    <result column="StaffID" property="staffid" jdbcType="VARCHAR" />
+    <result column="StaffName" property="staffname" jdbcType="VARCHAR" />
+    <result column="SexID" property="sexid" jdbcType="INTEGER" />
+    <result column="JobID" property="jobid" jdbcType="VARCHAR" />
+    <result column="GradeID" property="gradeid" jdbcType="VARCHAR" />
+    <result column="EduBackgroundID" property="edubackgroundid" jdbcType="INTEGER" />
+    <result column="Birthday" property="birthday" jdbcType="VARCHAR" />
+    <result column="NativePlace" property="nativeplace" jdbcType="VARCHAR" />
+    <result column="FamilyAddress" property="familyaddress" jdbcType="VARCHAR" />
+    <result column="IDcard" property="idcard" jdbcType="VARCHAR" />
+    <result column="Tel" property="tel" jdbcType="VARCHAR" />
+    <result column="Major" property="major" jdbcType="VARCHAR" />
+    <result column="EmployedDate" property="employeddate" jdbcType="TIMESTAMP" />
+    <result column="Salary" property="salary" jdbcType="VARCHAR" />
+    <association property="sexs" javaType="com.pojo.Sexs">
+      <id property="sexid" column="SexID"/>
+      <result property="sexname" column="SexName"/>
+    </association>
+    <association property="jobs" javaType="com.pojo.Jobs">
+      <id property="jobid" column="JobID"/>
+      <result property="jobname" column="JobName"/>
+    </association>
+    <association property="grades" javaType="com.pojo.Grades">
+      <id property="gradeid" column="GradeID"/>
+      <result property="gradename" column="GradeName"/>
+    </association>
+    <association property="eduBackgrounds" javaType="com.pojo.EduBackgrounds">
+      <id property="edubackgroundid" column="edubackgroundid"/>
+      <result property="edubackgroundname" column="edubackgroundname"/>
+    </association>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, StaffID, StaffName, staffs.SexID, staffs.JobID, staffs.GradeID, staffs.EduBackgroundID, Birthday, NativePlace,
+    FamilyAddress, IDcard, Tel, Major, EmployedDate, Salary
+  </sql>
+  <sql id="WithAll_Column_List">
+    staffs.ID, staffs.StaffID, staffs.StaffName, staffs.SexID, staffs.JobID, staffs.GradeID, staffs.EduBackgroundID,
+    staffs.Birthday, staffs.NativePlace,staffs.FamilyAddress, staffs.IDcard, staffs.Tel, staffs.Major, staffs.EmployedDate,
+    staffs.Salary, edubackgrounds.EduBackgroundID,edubackgrounds.edubackgroundname, sexs.SexID,sexs.SexName, jobs.JobID,
+    jobs.JobName,grades.GradeID, grades.GradeName
+  </sql>
+<!--      List<Staffs> selectByStaffIDWithALL(Staffs staffsid);
+
+    Staffs selectOneByStaffIDWithAll(Staffs staffsid);-->
+  <select id="selectByStaffIDWithALL" resultMap="WithAllResultMap">
+        select
+        <if test="ditinct">
+          distinct
+        </if>
+        <include refid="WithAll_Column_List"></include>
+        from staffs
+        left join edubackgrounds  on staffs.EduBackgroundID = edubackgrounds.EduBackgroundID
+        left join jobs  on staffs.JobID = jobs.JobID
+        left join sexs  on staffs.SexID = sexs.SexID
+        left join grades  on staffs.GradeID = grades.GradeID
+
+  </select>
+
+  <select id="selectOneByStaffIDWithAll" resultMap="WithAllResultMap">
+    select
+    <include refid="WithAll_Column_List" />
+    from staffs
+    left join edubackgrounds  on staffs.EduBackgroundID = edubackgrounds.EduBackgroundID
+    left join jobs  on staffs.JobID = jobs.JobID
+    left join sexs  on staffs.SexID = sexs.SexID
+    left join grades  on staffs.GradeID = grades.GradeID
+    where StaffID = #{staffsid,jdbcType=INTEGER}
+  </select>
+
+  <delete id="deleteByStaffID" parameterType="java.lang.Integer" >
+    delete from staffs
+    where StaffID = #{staffsid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.pojo.Staffs" >
+    insert into staffs (ID, StaffID, StaffName, 
+      SexID, JobID, GradeID, 
+      EduBackgroundID, Birthday, NativePlace, 
+      FamilyAddress, IDcard, Tel, 
+      Major, EmployedDate, Salary
+      )
+    values (#{id,jdbcType=INTEGER}, #{staffid,jdbcType=VARCHAR}, #{staffname,jdbcType=VARCHAR}, 
+      #{sexid,jdbcType=INTEGER}, #{jobid,jdbcType=VARCHAR}, #{gradeid,jdbcType=VARCHAR}, 
+      #{edubackgroundid,jdbcType=INTEGER}, #{birthday,jdbcType=VARCHAR}, #{nativeplace,jdbcType=VARCHAR}, 
+      #{familyaddress,jdbcType=VARCHAR}, #{idcard,jdbcType=VARCHAR}, #{tel,jdbcType=VARCHAR}, 
+      #{major,jdbcType=VARCHAR}, #{employeddate,jdbcType=TIMESTAMP}, #{salary,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.pojo.Staffs" >
+    insert into staffs
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="staffid != null" >
+        StaffID,
+      </if>
+      <if test="staffname != null" >
+        StaffName,
+      </if>
+      <if test="sexid != null" >
+        SexID,
+      </if>
+      <if test="jobid != null" >
+        JobID,
+      </if>
+      <if test="gradeid != null" >
+        GradeID,
+      </if>
+      <if test="edubackgroundid != null" >
+        EduBackgroundID,
+      </if>
+      <if test="birthday != null" >
+        Birthday,
+      </if>
+      <if test="nativeplace != null" >
+        NativePlace,
+      </if>
+      <if test="familyaddress != null" >
+        FamilyAddress,
+      </if>
+      <if test="idcard != null" >
+        IDcard,
+      </if>
+      <if test="tel != null" >
+        Tel,
+      </if>
+      <if test="major != null" >
+        Major,
+      </if>
+      <if test="employeddate != null" >
+        EmployedDate,
+      </if>
+      <if test="salary != null" >
+        Salary,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="staffid != null" >
+        #{staffid,jdbcType=VARCHAR},
+      </if>
+      <if test="staffname != null" >
+        #{staffname,jdbcType=VARCHAR},
+      </if>
+      <if test="sexid != null" >
+        #{sexid,jdbcType=INTEGER},
+      </if>
+      <if test="jobid != null" >
+        #{jobid,jdbcType=VARCHAR},
+      </if>
+      <if test="gradeid != null" >
+        #{gradeid,jdbcType=VARCHAR},
+      </if>
+      <if test="edubackgroundid != null" >
+        #{edubackgroundid,jdbcType=INTEGER},
+      </if>
+      <if test="birthday != null" >
+        #{birthday,jdbcType=VARCHAR},
+      </if>
+      <if test="nativeplace != null" >
+        #{nativeplace,jdbcType=VARCHAR},
+      </if>
+      <if test="familyaddress != null" >
+        #{familyaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="idcard != null" >
+        #{idcard,jdbcType=VARCHAR},
+      </if>
+      <if test="tel != null" >
+        #{tel,jdbcType=VARCHAR},
+      </if>
+      <if test="major != null" >
+        #{major,jdbcType=VARCHAR},
+      </if>
+      <if test="employeddate != null" >
+        #{employeddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="salary != null" >
+        #{salary,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByStaffIDSelective" parameterType="com.pojo.Staffs" >
+    update staffs
+    <set >
+      <if test="staffid != null" >
+        StaffID = #{staffid,jdbcType=VARCHAR},
+      </if>
+      <if test="staffname != null" >
+        StaffName = #{staffname,jdbcType=VARCHAR},
+      </if>
+      <if test="sexid != null" >
+        SexID = #{sexid,jdbcType=INTEGER},
+      </if>
+      <if test="jobid != null" >
+        JobID = #{jobid,jdbcType=VARCHAR},
+      </if>
+      <if test="gradeid != null" >
+        GradeID = #{gradeid,jdbcType=VARCHAR},
+      </if>
+      <if test="edubackgroundid != null" >
+        EduBackgroundID = #{edubackgroundid,jdbcType=INTEGER},
+      </if>
+      <if test="birthday != null" >
+        Birthday = #{birthday,jdbcType=VARCHAR},
+      </if>
+      <if test="nativeplace != null" >
+        NativePlace = #{nativeplace,jdbcType=VARCHAR},
+      </if>
+      <if test="familyaddress != null" >
+        FamilyAddress = #{familyaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="idcard != null" >
+        IDcard = #{idcard,jdbcType=VARCHAR},
+      </if>
+      <if test="tel != null" >
+        Tel = #{tel,jdbcType=VARCHAR},
+      </if>
+      <if test="major != null" >
+        Major = #{major,jdbcType=VARCHAR},
+      </if>
+      <if test="employeddate != null" >
+        EmployedDate = #{employeddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="salary != null" >
+        Salary = #{salary,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where StaffID = #{staffid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByStaffID" parameterType="com.pojo.Staffs" >
+    update staffs
+    set StaffID = #{staffid,jdbcType=VARCHAR},
+      StaffName = #{staffname,jdbcType=VARCHAR},
+      SexID = #{sexid,jdbcType=INTEGER},
+      JobID = #{jobid,jdbcType=VARCHAR},
+      GradeID = #{gradeid,jdbcType=VARCHAR},
+      EduBackgroundID = #{edubackgroundid,jdbcType=INTEGER},
+      Birthday = #{birthday,jdbcType=VARCHAR},
+      NativePlace = #{nativeplace,jdbcType=VARCHAR},
+      FamilyAddress = #{familyaddress,jdbcType=VARCHAR},
+      IDcard = #{idcard,jdbcType=VARCHAR},
+      Tel = #{tel,jdbcType=VARCHAR},
+      Major = #{major,jdbcType=VARCHAR},
+      EmployedDate = #{employeddate,jdbcType=TIMESTAMP},
+      Salary = #{salary,jdbcType=VARCHAR}
+    where StaffID = #{staffid,jdbcType=INTEGER}
+  </update>
+</mapper>

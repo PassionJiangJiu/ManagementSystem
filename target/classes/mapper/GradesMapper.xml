@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.GradesMapper" >
+  <resultMap id="BaseResultMap" type="com.pojo.Grades" >
+    <id column="GradeID" property="gradeid" jdbcType="VARCHAR" />
+    <result column="GradeName" property="gradename" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    GradeID, GradeName
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from grades
+    where GradeID = #{gradeid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from grades
+    where GradeID = #{gradeid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.pojo.Grades" >
+    insert into grades (GradeID, GradeName)
+    values (#{gradeid,jdbcType=VARCHAR}, #{gradename,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.pojo.Grades" >
+    insert into grades
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="gradeid != null" >
+        GradeID,
+      </if>
+      <if test="gradename != null" >
+        GradeName,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="gradeid != null" >
+        #{gradeid,jdbcType=VARCHAR},
+      </if>
+      <if test="gradename != null" >
+        #{gradename,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.pojo.Grades" >
+    update grades
+    <set >
+      <if test="gradename != null" >
+        GradeName = #{gradename,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where GradeID = #{gradeid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.pojo.Grades" >
+    update grades
+    set GradeName = #{gradename,jdbcType=VARCHAR}
+    where GradeID = #{gradeid,jdbcType=VARCHAR}
+  </update>
+</mapper>

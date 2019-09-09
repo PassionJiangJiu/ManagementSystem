@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.JobsMapper" >
+  <resultMap id="BaseResultMap" type="com.pojo.Jobs" >
+    <id column="JobID" property="jobid" jdbcType="VARCHAR" />
+    <result column="JobName" property="jobname" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    JobID, JobName
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from jobs
+    where JobID = #{jobid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from jobs
+    where JobID = #{jobid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.pojo.Jobs" >
+    insert into jobs (JobID, JobName)
+    values (#{jobid,jdbcType=VARCHAR}, #{jobname,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.pojo.Jobs" >
+    insert into jobs
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="jobid != null" >
+        JobID,
+      </if>
+      <if test="jobname != null" >
+        JobName,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="jobid != null" >
+        #{jobid,jdbcType=VARCHAR},
+      </if>
+      <if test="jobname != null" >
+        #{jobname,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.pojo.Jobs" >
+    update jobs
+    <set >
+      <if test="jobname != null" >
+        JobName = #{jobname,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where JobID = #{jobid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.pojo.Jobs" >
+    update jobs
+    set JobName = #{jobname,jdbcType=VARCHAR}
+    where JobID = #{jobid,jdbcType=VARCHAR}
+  </update>
+</mapper>

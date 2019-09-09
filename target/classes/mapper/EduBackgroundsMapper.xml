@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.EduBackgroundsMapper" >
+  <resultMap id="BaseResultMap" type="com.pojo.EduBackgrounds" >
+    <id column="EduBackgroundID" property="edubackgroundid" jdbcType="INTEGER" />
+    <result column="EduBackgroundName" property="edubackgroundname" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    EduBackgroundID, EduBackgroundName
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from edubackgrounds
+    where EduBackgroundID = #{edubackgroundid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from edubackgrounds
+    where EduBackgroundID = #{edubackgroundid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.pojo.EduBackgrounds" >
+    insert into edubackgrounds (EduBackgroundID, EduBackgroundName
+      )
+    values (#{edubackgroundid,jdbcType=INTEGER}, #{edubackgroundname,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.pojo.EduBackgrounds" >
+    insert into edubackgrounds
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="edubackgroundid != null" >
+        EduBackgroundID,
+      </if>
+      <if test="edubackgroundname != null" >
+        EduBackgroundName,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="edubackgroundid != null" >
+        #{edubackgroundid,jdbcType=INTEGER},
+      </if>
+      <if test="edubackgroundname != null" >
+        #{edubackgroundname,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.pojo.EduBackgrounds" >
+    update edubackgrounds
+    <set >
+      <if test="edubackgroundname != null" >
+        EduBackgroundName = #{edubackgroundname,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where EduBackgroundID = #{edubackgroundid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.pojo.EduBackgrounds" >
+    update edubackgrounds
+    set EduBackgroundName = #{edubackgroundname,jdbcType=VARCHAR}
+    where EduBackgroundID = #{edubackgroundid,jdbcType=INTEGER}
+  </update>
+</mapper>

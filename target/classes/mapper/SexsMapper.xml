@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.SexsMapper" >
+  <resultMap id="BaseResultMap" type="com.pojo.Sexs" >
+    <id column="SexID" property="sexid" jdbcType="INTEGER" />
+    <result column="SexName" property="sexname" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <select id="selectBySexID" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    SexName
+    from sexs
+    where SexID = #{sexid,jdbcType=INTEGER}
+  </select>
+
+</mapper>
