@@ -2,6 +2,8 @@ package com.dao;
 
 import com.pojo.Sexs;
 
+import java.util.List;
+
 public interface SexsMapper {
     int deleteByPrimaryKey(Integer sexid);
 
@@ -9,7 +11,7 @@ public interface SexsMapper {
 
     int insertSelective(Sexs record);
 
-    Sexs selectByPrimaryKey(Integer sexid);
+    List<Sexs> selectAll();
 
     int updateByPrimaryKeySelective(Sexs record);
 

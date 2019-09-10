@@ -21,7 +21,7 @@ public class Staffs {
 
     private Grades grades;
 
-    private Integer edubackgroundid;
+    private String edubackgroundid;
 
     private EduBackgrounds eduBackgrounds;
 
@@ -37,7 +37,7 @@ public class Staffs {
 
     private String major;
 
-    private Date employeddate;
+    private String employeddate;
 
     private String salary;
 
@@ -89,11 +89,11 @@ public class Staffs {
         this.gradeid = gradeid == null ? null : gradeid.trim();
     }
 
-    public Integer getEdubackgroundid() {
+    public String getEdubackgroundid() {
         return edubackgroundid;
     }
 
-    public void setEdubackgroundid(Integer edubackgroundid) {
+    public void setEdubackgroundid(String edubackgroundid) {
         this.edubackgroundid = edubackgroundid;
     }
 
@@ -145,11 +145,12 @@ public class Staffs {
         this.major = major == null ? null : major.trim();
     }
 
-    public Date getEmployeddate() {
+
+    public String getEmployeddate() {
         return employeddate;
     }
 
-    public void setEmployeddate(Date employeddate) {
+    public void setEmployeddate(String employeddate) {
         this.employeddate = employeddate;
     }
 

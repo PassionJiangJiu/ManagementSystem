@@ -2,6 +2,8 @@ package com.dao;
 
 import com.pojo.Grades;
 
+import java.util.List;
+
 public interface GradesMapper {
     int deleteByPrimaryKey(String gradeid);
 
@@ -9,7 +11,7 @@ public interface GradesMapper {
 
     int insertSelective(Grades record);
 
-    Grades selectByPrimaryKey(String gradeid);
+    List<Grades> selectAll();
 
     int updateByPrimaryKeySelective(Grades record);
 

@@ -1104,8 +1104,7 @@
     </column>
     <column id="268" parent="233" name="EmployedDate">
       <Position>14</Position>
-      <DataType>datetime|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>varchar(40)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="269" parent="233" name="Salary">

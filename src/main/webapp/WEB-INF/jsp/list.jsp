@@ -100,7 +100,7 @@
                             <span aria-hidden="true">&laquo;</span>
                         </a>
                     </li>
-                    <c:forEach items="${pageInfo.navigatepageNums}" var="pageNums">
+                    <c:forEach items="${PageInfo.navigatepageNums}" var="pageNums">
                         <c:if test="${pageNums == pageInfo.pageNum}"></c:if>
                             <li class="active"><a href="#">${pageNums}</a></li>
                         <c:if test="${pageNums != pageInfo.pageNum}">

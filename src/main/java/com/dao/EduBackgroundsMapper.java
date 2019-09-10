@@ -2,6 +2,8 @@ package com.dao;
 
 import com.pojo.EduBackgrounds;
 
+import java.util.List;
+
 public interface EduBackgroundsMapper {
     int deleteByPrimaryKey(Integer edubackgroundid);
 
@@ -9,7 +11,7 @@ public interface EduBackgroundsMapper {
 
     int insertSelective(EduBackgrounds record);
 
-    EduBackgrounds selectByPrimaryKey(Integer edubackgroundid);
+    List<EduBackgrounds> selectAll();
 
     int updateByPrimaryKeySelective(EduBackgrounds record);
 

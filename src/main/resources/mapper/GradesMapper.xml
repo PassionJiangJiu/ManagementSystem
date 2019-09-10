@@ -8,11 +8,13 @@
   <sql id="Base_Column_List" >
     GradeID, GradeName
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
-    select 
+  <select id="selectAll" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <if test="ditinct">
+      distinct
+    </if>
     <include refid="Base_Column_List" />
     from grades
-    where GradeID = #{gradeid,jdbcType=VARCHAR}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from grades

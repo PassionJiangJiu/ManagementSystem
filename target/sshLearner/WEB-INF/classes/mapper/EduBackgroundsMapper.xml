@@ -8,11 +8,13 @@
   <sql id="Base_Column_List" >
     EduBackgroundID, EduBackgroundName
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
+  <select id="selectAll" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <if test="ditinct">
+      distinct
+    </if>
     <include refid="Base_Column_List" />
     from edubackgrounds
-    where EduBackgroundID = #{edubackgroundid,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from edubackgrounds

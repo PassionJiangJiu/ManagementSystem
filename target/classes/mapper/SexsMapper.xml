@@ -6,11 +6,10 @@
     <result column="SexName" property="sexname" jdbcType="VARCHAR" />
   </resultMap>
 
-  <select id="selectBySexID" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
-    SexName
+  <select id="selectAll" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+        sexid, sexname
     from sexs
-    where SexID = #{sexid,jdbcType=INTEGER}
   </select>
 
 </mapper>

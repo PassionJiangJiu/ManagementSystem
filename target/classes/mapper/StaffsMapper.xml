@@ -8,14 +8,14 @@
     <result column="SexID" property="sexid" jdbcType="INTEGER" />
     <result column="JobID" property="jobid" jdbcType="VARCHAR" />
     <result column="GradeID" property="gradeid" jdbcType="VARCHAR" />
-    <result column="EduBackgroundID" property="edubackgroundid" jdbcType="INTEGER" />
+    <result column="EduBackgroundID" property="edubackgroundid" jdbcType="VARCHAR" />
     <result column="Birthday" property="birthday" jdbcType="VARCHAR" />
     <result column="NativePlace" property="nativeplace" jdbcType="VARCHAR" />
     <result column="FamilyAddress" property="familyaddress" jdbcType="VARCHAR" />
     <result column="IDcard" property="idcard" jdbcType="VARCHAR" />
     <result column="Tel" property="tel" jdbcType="VARCHAR" />
     <result column="Major" property="major" jdbcType="VARCHAR" />
-    <result column="EmployedDate" property="employeddate" jdbcType="TIMESTAMP" />
+    <result column="EmployedDate" property="employeddate" jdbcType="VARCHAR" />
     <result column="Salary" property="salary" jdbcType="VARCHAR" />
   </resultMap>
 <!--  联合查询-->
@@ -26,14 +26,14 @@
     <result column="SexID" property="sexid" jdbcType="INTEGER" />
     <result column="JobID" property="jobid" jdbcType="VARCHAR" />
     <result column="GradeID" property="gradeid" jdbcType="VARCHAR" />
-    <result column="EduBackgroundID" property="edubackgroundid" jdbcType="INTEGER" />
+    <result column="EduBackgroundID" property="edubackgroundid" jdbcType="VARCHAR" />
     <result column="Birthday" property="birthday" jdbcType="VARCHAR" />
     <result column="NativePlace" property="nativeplace" jdbcType="VARCHAR" />
     <result column="FamilyAddress" property="familyaddress" jdbcType="VARCHAR" />
     <result column="IDcard" property="idcard" jdbcType="VARCHAR" />
     <result column="Tel" property="tel" jdbcType="VARCHAR" />
     <result column="Major" property="major" jdbcType="VARCHAR" />
-    <result column="EmployedDate" property="employeddate" jdbcType="TIMESTAMP" />
+    <result column="EmployedDate" property="employeddate" jdbcType="VARCHAR" />
     <result column="Salary" property="salary" jdbcType="VARCHAR" />
     <association property="sexs" javaType="com.pojo.Sexs">
       <id property="sexid" column="SexID"/>
@@ -103,9 +103,9 @@
       )
     values (#{id,jdbcType=INTEGER}, #{staffid,jdbcType=VARCHAR}, #{staffname,jdbcType=VARCHAR}, 
       #{sexid,jdbcType=INTEGER}, #{jobid,jdbcType=VARCHAR}, #{gradeid,jdbcType=VARCHAR}, 
-      #{edubackgroundid,jdbcType=INTEGER}, #{birthday,jdbcType=VARCHAR}, #{nativeplace,jdbcType=VARCHAR}, 
+      #{edubackgroundid,jdbcType=VARCHAR}, #{birthday,jdbcType=VARCHAR}, #{nativeplace,jdbcType=VARCHAR},
       #{familyaddress,jdbcType=VARCHAR}, #{idcard,jdbcType=VARCHAR}, #{tel,jdbcType=VARCHAR}, 
-      #{major,jdbcType=VARCHAR}, #{employeddate,jdbcType=TIMESTAMP}, #{salary,jdbcType=VARCHAR}
+      #{major,jdbcType=VARCHAR}, #{employeddate,jdbcType=VARCHAR}, #{salary,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.pojo.Staffs" >
@@ -177,7 +177,7 @@
         #{gradeid,jdbcType=VARCHAR},
       </if>
       <if test="edubackgroundid != null" >
-        #{edubackgroundid,jdbcType=INTEGER},
+        #{edubackgroundid,jdbcType=VARCHAR},
       </if>
       <if test="birthday != null" >
         #{birthday,jdbcType=VARCHAR},
@@ -198,7 +198,7 @@
         #{major,jdbcType=VARCHAR},
       </if>
       <if test="employeddate != null" >
-        #{employeddate,jdbcType=TIMESTAMP},
+        #{employeddate,jdbcType=VARCHAR},
       </if>
       <if test="salary != null" >
         #{salary,jdbcType=VARCHAR},
@@ -224,7 +224,7 @@
         GradeID = #{gradeid,jdbcType=VARCHAR},
       </if>
       <if test="edubackgroundid != null" >
-        EduBackgroundID = #{edubackgroundid,jdbcType=INTEGER},
+        EduBackgroundID = #{edubackgroundid,jdbcType=VARCHAR},
       </if>
       <if test="birthday != null" >
         Birthday = #{birthday,jdbcType=VARCHAR},
@@ -245,7 +245,7 @@
         Major = #{major,jdbcType=VARCHAR},
       </if>
       <if test="employeddate != null" >
-        EmployedDate = #{employeddate,jdbcType=TIMESTAMP},
+        EmployedDate = #{employeddate,jdbcType=VARCHAR},
       </if>
       <if test="salary != null" >
         Salary = #{salary,jdbcType=VARCHAR},
@@ -260,14 +260,14 @@
       SexID = #{sexid,jdbcType=INTEGER},
       JobID = #{jobid,jdbcType=VARCHAR},
       GradeID = #{gradeid,jdbcType=VARCHAR},
-      EduBackgroundID = #{edubackgroundid,jdbcType=INTEGER},
+      EduBackgroundID = #{edubackgroundid,jdbcType=VARCHAR},
       Birthday = #{birthday,jdbcType=VARCHAR},
       NativePlace = #{nativeplace,jdbcType=VARCHAR},
       FamilyAddress = #{familyaddress,jdbcType=VARCHAR},
       IDcard = #{idcard,jdbcType=VARCHAR},
       Tel = #{tel,jdbcType=VARCHAR},
       Major = #{major,jdbcType=VARCHAR},
-      EmployedDate = #{employeddate,jdbcType=TIMESTAMP},
+      EmployedDate = #{employeddate,jdbcType=VARCHAR},
       Salary = #{salary,jdbcType=VARCHAR}
     where StaffID = #{staffid,jdbcType=INTEGER}
   </update>
