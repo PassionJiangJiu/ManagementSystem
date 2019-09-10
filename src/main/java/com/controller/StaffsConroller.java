@@ -20,6 +20,12 @@ public class StaffsConroller {
     @Autowired
     StaffsService staffsService;
 
+    @RequestMapping("/checkid")
+    public Msg checkid(String staffid){
+        staffsService.checkId
+    }
+
+
 
     @RequestMapping(value = "staff",method = RequestMethod.POST)
     @ResponseBody

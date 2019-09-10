@@ -155,8 +155,8 @@
 <div class="container">
     <!--        标题-->
     <div class="row">
-        <div class="col-md-12">
-            <h1>SSM-CRUD</h1>
+        <div class="col-md-12"> b 
+            <h1>高校管理系统</h1>
         </div>
     </div>
     <!--    按钮-->
@@ -446,6 +446,13 @@
 
         return false;
     }
+    //检验用户名是否可用
+    $("#staffid_add_input").change(function () {
+        //发送ajax请求校验用户名是否可用
+
+
+
+    })
 
     //点击保存，保存员工
     $("#staff_save_btn").click(function() {
