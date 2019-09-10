@@ -919,9 +919,8 @@
     <table id="234" parent="3" name="users"/>
     <column id="235" parent="229" name="EduBackgroundID">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>varchar(2)|0s</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="236" parent="229" name="EduBackgroundName">
@@ -935,11 +934,10 @@
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="238" parent="229" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
+    <index id="238" parent="229" name="EduBackgroundID">
       <ColNames>EduBackgroundID</ColNames>
-      <Primary>1</Primary>
-    </key>
+      <Type>btree</Type>
+    </index>
     <key id="239" parent="229" name="EduBackgroundName">
       <ColNames>EduBackgroundName</ColNames>
       <UnderlyingIndexName>EduBackgroundName</UnderlyingIndexName>
@@ -1032,7 +1030,7 @@
     </column>
     <column id="256" parent="233" name="StaffID">
       <Position>2</Position>
-      <DataType>varchar(10)|0s</DataType>
+      <DataType>varchar(12)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -1062,7 +1060,7 @@
     </column>
     <column id="261" parent="233" name="EduBackgroundID">
       <Position>7</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>varchar(2)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -1135,7 +1133,7 @@
       <ColNames>GradeID</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="275" parent="233" name="EduBackgroundID">
+    <index id="275" parent="233" name="staffs_ibfk_4">
       <ColNames>EduBackgroundID</ColNames>
       <Type>btree</Type>
     </index>
@@ -1176,6 +1174,7 @@
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="284" parent="234" name="StaffID">
@@ -1187,12 +1186,11 @@
     <column id="285" parent="234" name="Password">
       <Position>3</Position>
       <DataType>varchar(100)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="286" parent="234" name="UserType">
       <Position>4</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>varchar(3)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>

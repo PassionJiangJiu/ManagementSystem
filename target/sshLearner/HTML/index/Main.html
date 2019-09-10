@@ -1,0 +1,240 @@
+<script language="javascript" type="text/javascript">
+function click_scroll(obj,speed) {
+	var scroll_offset = $("#"+obj).offset();  //得到pos这个div层的offset，包含两个值，top和left
+	$("body,html").animate({
+		scrollTop:scroll_offset.top-96  //让body的scrollTop等于pos的top，就实现了滚动
+	},speed);
+}
+</script>
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>成都理工大学人事处</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<script language="javascript" src="loader.js"></script><!--读入源网站里的已有的css和js文件-->
+<script src="jquery.sly.js"></script><!--信息公告的滚动效果-->
+</head>
+<body>
+<div id="SiteNavbar_myNavBar" class="navbar  navbar-fixed-top navbar-blue">
+	
+<div id="SiteNavbar_myNavLogo" class="container sitelogo">
+		
+  <div id="SiteNavbar_navbartopline" class="container navbartopline searchlabel">
+			<span><form action="/web/search.aspx?s=&" method="post" id="search_form"><input name="searchkey"  placeholder="搜索" autocomplete="off" id="searchkey" type="text" class="searchkey" /><input type="submit" id="searchbtn" class="searchbtn" /></form></span>
+		</div>
+  <div id="SiteNavbar_navbarindexline" class="container">
+			
+    <!------------------>
+    <div class="navbar-header"> 
+      <!--布局响应按钮-->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+      </button>
+      <!--标题LOGO--> 
+      <a class="navbar-brand" href="#">&nbsp;</a>
+    </div>
+    <!------------------>
+    <div class="navbar-collapse collapse" style="">
+    
+      <ul class="nav navbar-nav">
+        <li><a href="http://rsc.cdut.edu.cn/WEB/">首页</a></li><li><a href="http://rsc.cdut.edu.cn/WEB/Department.aspx">人事处</a></li><li><a href="http://rsc.cdut.edu.cn/Recruitment/">人才选聘</a></li><li><a href="http://rsc.cdut.edu.cn/Postdoctor/">博士后</a></li><li><a href="http://rsc.cdut.edu.cn/Download/">资料下载</a></li>
+      </ul>
+    
+    </div>
+    <!------------------>
+    
+		</div>
+
+	</div>
+
+</div>
+
+<div id="wrap">
+  <form method="post" action="./" id="ctl00">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwNzMzNDQwMDkPZBYGZg9kFgJmDw8WBB4IQ3NzQ2xhc3MFJG5hdmJhciAgbmF2YmFyLWZpeGVkLXRvcCBuYXZiYXItYmx1ZR4EXyFTQgICZBYCAgEPDxYEHwAFEmNvbnRhaW5lciBzaXRlbG9nbx8BAgJkFgQCAQ8PFgYfAAUjY29udGFpbmVyIG5hdmJhcnRvcGxpbmUgc2VhcmNobGFiZWwfAQICHgdWaXNpYmxlZ2RkAgMPZBYCAgEPFgIfAmdkAgEPZBYCAgEPDxYEHwAFF3BhZGRpbmd0b3A4MCBzdHlsZS1ibHVlHwECAmQWBAIBD2QWBAIBDxYCHgtfIUl0ZW1Db3VudAIEFghmD2QWAmYPFQIBMAcgYWN0aXZlZAIBD2QWAmYPFQIBMQBkAgIPZBYCZg8VAgEyAGQCAw9kFgJmDxUCATMAZAIDDxYCHwMCBBYIZg9kFgJmDxUIByBhY3RpdmVZPGltZyBzcmM9Ii9pbWFnZXMvYy5wbmciIHN0eWxlPSJiYWNrZ3JvdW5kLWltYWdlOnVybCgvSW1hZ2VzL3dlYi9DYXJvdXNlbC8xMzAxL2MucG5nKSIgLz4PY2Fyb3VzZWxjYXB0aW9uLTxpbWcgc3JjPSIvSW1hZ2VzL3dlYi9DYXJvdXNlbC8xMzAxL3QucG5nIiAvPgYmbmJzcDshc3R5bGU9ImJhY2tncm91bmQtY29sb3I6IzFiYjI0OSIgDS9SZWNydWl0bWVudC8M5p+l55yL6K+m57uGZAIBD2QWAmYPFQgAWTxpbWcgc3JjPSIvaW1hZ2VzL2MucG5nIiBzdHlsZT0iYmFja2dyb3VuZC1pbWFnZTp1cmwoL0ltYWdlcy93ZWIvQ2Fyb3VzZWwvMTMxNi9jLnBuZykiIC8+D2Nhcm91c2VsY2FwdGlvbi08aW1nIHNyYz0iL0ltYWdlcy93ZWIvQ2Fyb3VzZWwvMTMxNi90LnBuZyIgLz4GJm5ic3A7ABsvd2ViL3YuYXNweD9zPSZjaWQ9MDA2MTAwNjYGJm5ic3A7ZAICD2QWAmYPFQgAWTxpbWcgc3JjPSIvaW1hZ2VzL2MucG5nIiBzdHlsZT0iYmFja2dyb3VuZC1pbWFnZTp1cmwoL0ltYWdlcy93ZWIvQ2Fyb3VzZWwvMTMxNy9jLnBuZykiIC8+D2Nhcm91c2VsY2FwdGlvbi08aW1nIHNyYz0iL0ltYWdlcy93ZWIvQ2Fyb3VzZWwvMTMxNy90LnBuZyIgLz4GJm5ic3A7IXN0eWxlPSJiYWNrZ3JvdW5kLWNvbG9yOiNkZTJiMmMiILABL3dlYi92LmFzcHg/cz0mY2lkPTAwNjEwMDYzJmFpZD0wMDYwMDA2OTAxMTIwMDY2MDExNDAxMTIwMDY1MDA2NTAwNTcwMDY2MDA2MzAwNjAwMTEzMDA1NzAwNjQwMTE0MDA2NDAwNjQwMDU3MDExMDAxMTQwMTEzMDExMjAwNTcwMTExMDA2MTAwNjIwMDY3MDA2NzAwNjEwMDYyMDExNDAxMDkwMTEzMDA2NjAxMTQM5p+l55yL6K+m57uGZAIDD2QWAmYPFQgAWTxpbWcgc3JjPSIvaW1hZ2VzL2MucG5nIiBzdHlsZT0iYmFja2dyb3VuZC1pbWFnZTp1cmwoL0ltYWdlcy93ZWIvQ2Fyb3VzZWwvMTMxNC9jLnBuZykiIC8+D2Nhcm91c2VsY2FwdGlvbi08aW1nIHNyYz0iL0ltYWdlcy93ZWIvQ2Fyb3VzZWwvMTMxNC90LnBuZyIgLz4GJm5ic3A7IXN0eWxlPSJiYWNrZ3JvdW5kLWNvbG9yOiNkZTJiMmMiIBsvd2ViL3YuYXNweD9zPSZjaWQ9MDA2MTAwNjYM5oiQ57up5rGH5oqlZAILDw8WAh8CaGRkAgIPZBYCZg8PFgQfAAUQZm9vdGVyIGZvb3QtYmx1ZR8BAgJkZGSuGelPLOTYGqPQV5k6NK55C83Xf3HtzPdVfnKYQMIq6A==" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C714824B" />
+</div>
+    <div id="pagemain" class="paddingtop80 style-blue">
+	
+      <!-- Carousel -->
+<div id="myCarousel" class="carousel slide"> 
+  <ol class="carousel-indicators">
+    
+    <li data-target="#myCarousel" data-slide-to="0"  class=" active"></li>
+    
+    <li data-target="#myCarousel" data-slide-to="1"  class=""></li>
+    
+    <li data-target="#myCarousel" data-slide-to="2"  class=""></li>
+    
+    <li data-target="#myCarousel" data-slide-to="3"  class=""></li>
+    
+  </ol>
+  <div class="carousel-inner">
+    
+        <div class="item active">
+          <img src="http://rsc.cdut.edu.cn/images/c.png" style="background-image:url(http://rsc.cdut.edu.cn/Images/web/Carousel/1301/c.png)" />
+          <div class="container carouselcaption">
+            <div class="carousel-caption">
+              <h1><img src="http://rsc.cdut.edu.cn/Images/web/Carousel/1301/t.png" /></h1>
+              <p class="info">&nbsp;</p>
+              <p class="target"><a style="background-color:#1bb249"  href="http://rsc.cdut.edu.cn/Recruitment/">查看详细</a></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="item">
+          <img src="http://rsc.cdut.edu.cn/images/c.png" style="background-image:url(http://rsc.cdut.edu.cn/Images/web/Carousel/1316/c.png)" />
+          <div class="container carouselcaption">
+            <div class="carousel-caption">
+              <h1><img src="http://rsc.cdut.edu.cn/Images/web/Carousel/1316/t.png" /></h1>
+              <p class="info">&nbsp;</p>
+              <p class="target"><a  href="/web/v.aspx?s=&cid=00610066">&nbsp;</a></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="item">
+          <img src="http://rsc.cdut.edu.cn/images/c.png" style="background-image:url(http://rsc.cdut.edu.cn/Images/web/Carousel/1317/c.png)" />
+          <div class="container carouselcaption">
+            <div class="carousel-caption">
+              <h1><img src="http://rsc.cdut.edu.cn/Images/web/Carousel/1317/t.png" /></h1>
+              <p class="info">&nbsp;</p>
+              <p class="target"><a style="background-color:#de2b2c"  href="http://rsc.cdut.edu.cn/web/v.aspx?s=&cid=00610063&aid=006000690112006601140112006500650057006600630060011300570064011400640064005701100114011301120057011100610062006700670061006201140109011300660114">查看详细</a></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="item">
+          <img src="http://rsc.cdut.edu.cn/images/c.png" style="background-image:url(http://rsc.cdut.edu.cn/Images/web/Carousel/1314/c.png)" />
+          <div class="container carouselcaption">
+            <div class="carousel-caption">
+              <h1><img src="http://rsc.cdut.edu.cn/Images/web/Carousel/1314/t.png" /></h1>
+              <p class="info">&nbsp;</p>
+              <p class="target"><a style="background-color:#de2b2c"  href="http://rsc.cdut.edu.cn/web/v.aspx?s=&cid=00610066">成绩汇报</a></p>
+            </div>
+          </div>
+        </div>
+        
+  </div>
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+  <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+  <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+<!-- /.Carousel -->
+
+      <div id="indexbar" class="indexbar">
+
+	</div>
+      <div id="part1" class="container warehouse">
+		
+        <div id="mainnotice" class="col-lg-8 col-md-8 col-sm-8 mainnotice">
+			<span class="title"><h4><a href="http://rsc.cdut.edu.cn/web/v.aspx?cid=00610061"><span class="t1">工作动态</span><span class="t2">INFORMATION</span></a></h4></span><span class="list"><div class="item"><a href="http://rsc.cdut.edu.cn/web/v.aspx?cid=00610061&aid=011401130111006700630109006801140057006700620110006000570064011100620109005701100060006600650057011401140111006501090111010900630112006200650069"><span class="like">197</span><span class="times">2019-08-29</span><span class="tt">关于颁发2019年“教育工作三十年纪念” 荣誉证书的通知</span></a></div><div class="item"><a href="http://rsc.cdut.edu.cn/web/v.aspx?cid=00610061&aid=011100600114006901100113006201130057010900600060006200570064006901130064005700680063006400640057011200630110011401140062011300610060006800690068"><span class="like">707</span><span class="times">2019-07-11</span><span class="tt">关于开展四川省 教书育人名师推荐遴选工作的通知</span></a></div><div class="item"><a href="http://rsc.cdut.edu.cn/web/v.aspx?cid=00610061&aid=011101140061006901130114006001090057006401100114011300570064006700630068005701090110006201140057006401090067011400630064006001110114006900650068"><span class="like">1075</span><span class="times">2019-07-05</span><span class="tt">做细做实人才服务，探索推进社保工作“跑一次”改革</span></a></div><div class="item"><a href="http://rsc.cdut.edu.cn/web/v.aspx?cid=00610061&aid=011301110114006000630062006900670057011400660060006400570064006501130068005701100114011200610057006301100062006001110064006400600114011100650114"><span class="like">910</span><span class="times">2019-07-03</span><span class="tt">关于开展2019年上半年教师专业技术职务 任职资格确定（确认）工作的通知</span></a></div><div class="item"><a href="/web/v.aspx?cid=00610061&aid=006200670109011301140063006200680057006200630109006700570064006100630113005701090067011101100057006301130069006900610113006800660065011000670069"><span class="like">766</span><span class="times">2019-06-26</span><span class="tt">关于统计学校 2018～2019学年获奖情况的通知</span></a></div><div class="item"><a href="http://rsc.cdut.edu.cn/web/v.aspx?cid=00610061&aid=006701120111006800670062006100680057011200610062006600570064006500640061005701100111011100610057010901110112006300680063006301110061006700660113"><span class="like">824</span><span class="times">2019-06-05</span><span class="tt">关于开展学校优秀专家风采展示工作的通知</span></a></div></span>
+		</div>
+        <div id="hotnotice" class="col-lg-4 col-md-4 col-sm-4 hotnotice">
+			<span class="title"><h4><a href="http://rsc.cdut.edu.cn/web/v.aspx?cid=00610062"><span class="t1">信息公告</span><span class="t2">NOTICE</span></a></h4></span><span id="conmo" class="list"><ul><li class="item"><span class="tt">#2019年4月成都市社会保险卡领取通知#</span><a href="http://rsc.cdut.edu.cn/web/v.aspx?cid=00610062&aid=006700650110011201090112006800660057011200670112006600570064006800610109005701100060006200630057006500630067006400680113011100670111011201090067"><span class="tt">以下教职工成都市社保卡已制好，请到人事处社保科314办公室领取：</span><span class="times">2019-04-19</span></a></li><li class="item"><span class="tt">#关于肖渊甫等六位教授申请延长退休年龄审批结果的公示#</span><a href="/web/v.aspx?cid=00610062&aid=006601100114006800670065010900620057011001140060006900570064006601140069005700680114006000670057010901130113006201110068006600660060006801100062"><span class="tt">根据《四川省教育厅关于进一步加强高级专家延长退休年龄管理工作的通知》（川教函〔2018〕462号）及《成都理工大学高级专家延长退休年龄管理办法》（成理校人〔20...</span><span class="times">2019-04-09</span></a></li><li class="item"><span class="tt">#2019年3月成都市社会保险卡领取通知#</span><a href="/web/v.aspx?cid=00610062&aid=006900690061006900660109006001140057006300690064011000570064011101140067005700680068006101090057006501130114011000600065006400670066006801110060"><span class="tt">以下教职工成都市社会保险卡已制好，请到人事处社保科（第一行政楼314办公室）领取：</span><span class="times">2019-04-03</span></a></li><li class="item"><span class="tt">#成都理工大学拟聘人员考核结果公示#</span><a href="/web/v.aspx?cid=00610062&aid=011400620069006700640113006901090057006000650110011000570064006400680069005700680110006900610057006101130113011400690064010900660114006300690065"><span class="tt">根据《成都理工大学2017年师资补充计划公告》、《成都理工大学2018年度招聘工作人员第一批次公告》、《成都理工大学2018年度招聘工作人员第二批次公告》及四川...</span><span class="times">2019-01-14</span></a></li></ul></span>
+		</div>
+      
+	</div>
+      <hr class="featurette-divider">
+      
+      <div id="part2" class="container warehouse lastcontainer">
+		
+        <div id="l1" class="col-lg-4 col-md-4 col-sm-4 mainpageinfo">
+			<span class="infoimg bg001"><span class="title"><h4><a href="/web/v.aspx?s=&cid=00610063"><span class="t1">人事政策</span><span class="t2">PQOLICY</span></a></h4></span></span><span class="list"><div class="item"><a href="/web/v.aspx?s=&cid=00610063&aid=006000690112006601140112006500650057006600630060011300570064011400640064005701100114011301120057011100610062006700670061006201140109011300660114"><span class="tt">中共四川省委 四川省人民政府 关于全面深化新时代教师队伍建设改革的实施意见</span></a></div><div class="item"><a href="/web/v.aspx?s=&cid=00610063&aid=006901090061006900680065006900680057006001120066011000570064006901120112005701090064006201110057011100620112006500640061006600690113006801140068"><span class="tt">人力资源社会保障部 中央组织部 中央编办 财政部关于建立机关事业单位防治“吃空饷”问题长效机制的指导意见 （人社部规〔2016〕6号）</span></a></div><div class="item"><a href="/web/v.aspx?s=&cid=00610063&aid=011401100111006700690109006200670057011200650112006900570064006201100063005701100110006901120057006600600069006000690066006000610064006701110062"><span class="tt">事业单位工作人员处分暂行规定（人力资源和社会保障部  监察部第18号令）</span></a></div><div class="item"><a href="/web/v.aspx?s=&cid=00610063&aid=011100690113010900660065010900690057011400660068006900570064011100630066005701100065006900640057011201090110006600600068011301140063006700610109"><span class="tt">事业单位人事管理条例（国务院令第652号）</span></a></div><div class="item">&nbsp;</div><div class="item">&nbsp;</div></span>
+		</div>
+        <div id="l2" class="col-lg-4 col-md-4 col-sm-4 mainpageinfo">
+			<span class="infoimg bg002"><span class="title"><h4><a href="/web/v.aspx?s=&cid=00610065"><span class="t1">办事指南</span><span class="t2">QUESTION</span></a></h4></span></span><span class="list"><div class="item"><a href="/web/v.aspx?s=&cid=00610065&aid=006201090109006401100114011300610057006200630061006000570064006500650063005700690064010900610057011300670060006801120061011101090113011200660113"><span class="tt">省本级医疗保险账户查询</span></a></div><div class="item"><a href="/web/v.aspx?s=&cid=00610065&aid=006401090067006200610069011000630057006901110069006400570064006901130060005700690064006600660057006601100114006000640063010900680110006701130110"><span class="tt">社会保障卡业务办理服务网点</span></a></div><div class="item"><a href="/web/v.aspx?s=&cid=00610065&aid=011300640062006100650109011200600057006700640064010900570064006000600062005700690113010901140057011200670111011301140110006300620068011001110061"><span class="tt">社会保障卡具有哪些主要功能?</span></a></div><div class="item"><a href="/web/v.aspx?s=&cid=00610065&aid=011200620111006900680066011001140057006800680110006900570064006201090064005700680112006300660057011101140114011000680067006601130066011300680063"><span class="tt">四川省第三代社会保障卡样式</span></a></div><div class="item"><a href="/web/v.aspx?s=&cid=00610065&aid=006700660112011301100112011400680057006700660111011400570064011101140065005701100111006601130057006000660063011301120112011401140069006800690061"><span class="tt">四川省医疗保险异地就医直接结算办法</span></a></div><div class="item"><a href="/web/v.aspx?s=&cid=00610065&aid=006900680068006901100060011201090057011101090060006400570064011301090111005700690065010901100057006400670065010901110067006000640062006200600068"><span class="tt">四川省省本级工伤治疗协议机构名单</span></a></div></span>
+		</div>
+        <div id="l3" class="col-lg-4 col-md-4 col-sm-4 mainpageinfo">
+			<span class="infoimg bg003"><span class="title"><h4><a href="/web/v.aspx"><span class="t1">人才引聘</span><span class="t2">RECRUITMENT</span></a></h4></span></span><span class="infoRecruit"><li><div><span class="zpzws">（共302个职位）</span><span><a href="/recruitment/v.aspx?t=0115&z=011400640113006000650112006301130057011101100068006100570064006200610060005700690113011400620057006400630062011401100112006101110060011200620062">2019年珠峰引才计划</a></span></div><div>招聘时间：2018年09月20日&nbsp;——&nbsp;2019年09月30日</div></li><a href="/recruitment/qomolangma.aspx" class="fl">成都理工大学珠峰引才计划（节选）</a></span>
+		</div>
+      
+	</div>
+      <hr class="featurette-divider">
+      
+    
+</div>
+  </form>
+</div>
+<div id="SiteFooter_footer" class="footer foot-blue">
+	
+	<div id="SiteFooter_footer1" class="container">
+		
+        <span class="col-md-4 link">
+            <h6>链接</h6>
+            <p>
+                <a href="http://www.gov.cn/">中国政府网</a>
+                <a href="http://www.mohrss.gov.cn/">中华人民共和国人力资源和社会保障部</a>
+                <a href="http://www.moe.gov.cn/">中华人民共和国教育部</a>
+                <a href="http://www.sc.hrss.gov.cn/">四川省人力资源和社会保障厅</a>
+                <a href="http://www.scedu.net/">四川省教育厅</a>
+                <a href="http://www.cpta.com.cn/">中国人事考试网</a>
+                <a href="http://www.scpta.gov.cn/">四川省人事考试网</a>
+                <a href="http://www.cjob.gov.cn/">中国公共招聘网</a>
+                <a href="http://www.chinapostdoctor.org.cn/">中国博士后</a>
+                <a href="http://www.chinajob.gov.cn/">中国就业网</a>
+                <a href="http://www.cnss.cn/">中国社会保障网</a>
+            </p>
+        </span>
+        <span class="col-md-5 contact">
+        	<h6>联系方式</h6>
+            <p>电话：+86-028-84078792（师资科）&nbsp;&nbsp;&nbsp;&nbsp;+86-028-84078920（人事科）</p>
+            <p>传真：+86-028-84078792</p>
+            <p>电子信箱：<a href="mailto:rsc@cdut.edu.cn">rsc@cdut.edu.cn</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:postdoc@cdut.edu.cn">postdoc@cdut.edu.cn(博士后)</a></p>
+            <p>通信地址：四川省成都市二仙桥东三路1号 成都理工大学人事处（610059）</p>
+        </span>
+        <span class="col-md-3 about">
+            <p><a href="/passport/"><img src="http://rsc.cdut.edu.cn/IMAGES/inosloginlogo.png" /></a></p><!--登录界面图片接口-->
+        </span>
+    
+	</div>
+    
+    <div id="SiteFooter_footer2" class="container">
+		
+    	<p class="copyright">&copy;&nbsp;&nbsp;1956-2014&nbsp;成都理工大学人事处&nbsp;|&nbsp;Chengdu University of Technology&nbsp;&nbsp;（未经允许不得转载或引用本网站内容）</p>
+    
+	</div>
+</div>
+
+</div>
+
+<script>
+$(function (){
+	$(window).manhuatoTop({
+		showHeight : 100,//设置滚动高度时显示
+		speed : 500 //返回顶部的速度以毫秒为单位
+	});
+});
+</script>
+</body>
+</html>
+<script>
+	$(function(){
+		var scrtime;
+		$("#conmo").hover(function(){
+		clearInterval(scrtime);
+		},function(){
+		scrtime = setInterval(function(){
+		var ul = $("#conmo ul");
+		var liHeight = ul.find("li:last").height();
+		ul.animate({marginTop : liHeight+40 +"px"},1000,function(){
+		ul.find("li:last").prependTo(ul)
+		ul.find("li:first").hide();
+		ul.css({marginTop:0});
+		ul.find("li:first").fadeIn(1000);
+		});        
+		},5000);
+		}).trigger("mouseleave");
+		});
+</script>
+<script src="load.SLY.js"></script><!--返回顶部的滚动效果-->

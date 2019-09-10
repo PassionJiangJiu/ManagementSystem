@@ -5,7 +5,7 @@
     <id column="UserID" property="userid" jdbcType="INTEGER" />
     <result column="StaffID" property="staffid" jdbcType="VARCHAR" />
     <result column="Password" property="password" jdbcType="VARCHAR" />
-    <result column="UserType" property="usertype" jdbcType="INTEGER" />
+    <result column="UserType" property="usertype" jdbcType="VARCHAR" />
   </resultMap>
 
   <select id="selectByStaffID" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
@@ -14,5 +14,12 @@
     where StaffID = #{staffid,jdbcType=INTEGER}
   </select>
 <!--  <update id="updataPassword"-->
+  <insert id="insertUser" parameterType="com.pojo.Users">
+    insert into users
+      (StaffID,Password,UserType)
+      values
+      (#{staffid,jdbcType=VARCHAR},#{staffid,jdbcType=VARCHAR},1)
+
+  </insert>
 
 </mapper>

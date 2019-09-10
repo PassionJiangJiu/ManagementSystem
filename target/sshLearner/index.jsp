@@ -408,7 +408,42 @@
         //1.拿到要校验的数据，使用正则表达式
         var staffid = $("#staffid_add_input").val();
         var regid = /^[0-9]{10}$/;
-        alert(regid.test(staffid));
+        if(!regid.test(staffid)){
+            alert("用户id为10位数字");
+            return false;
+        }
+
+
+        var staffname = $("#staffname_add_input").val();
+        var regname = /^([a-zA-Z0-9_-]{1,20}$)|(^[\u2E80-\u9FFF]{2,5})/;
+
+
+        if(!regname.test(staffname)){
+            alert("员工姓名格式不正确");
+            return false;
+        }
+
+        var idcard = $("#idcard_add_input").val();
+        var regidcard = /^[A-Z0-9]{18}$/;
+
+
+        if(!regidcard.test(idcard)){
+            alert("身份证位数不正确");
+            return false;
+        }
+
+
+        var tel = $("#tel_add_input").val();
+        var regtel = /^[0-9]{11,15}$/;
+
+
+        if(!regtel.test(tel)){
+            alert("电话格式不正确");
+            return false;
+        }
+
+
+
         return false;
     }
 
