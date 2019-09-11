@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<title>二级员工</title>
+		
+	</head>
+	<body>
+	<div class="profile">
+	</div>
+	<ul class="nav">
+		<li ><a href="javascript:;"><i class="fa fa-user"></i>员工管理<i class="fa fa-angle-right"></i></a>
+			<ul class="collapse">
+				<!-- 在href处修改需跳转的页面即可-->
+				<li><a href="AddStaff.html" class="one" target="contain">员工填写</a></li>
+				<li><a href="ShowStaff.html" class="second" target="contain">员工查看</a></li>
+			<li><a href="UpadteStaff.html" class="third" target="contain">员工编辑</a></li>
+			
+			</ul>
+		</li>
+		
+	
+	</ul>
+	<!-- <script src="../../骚扰c/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script> -->
+	<script type="text/javascript">
+		$(function($){
+			
+			 $(".nav>li").on("click",function(){
+			 	$(".nav>li").not(this).children("ul").removeClass("in");
+			 	$(this).children("ul").toggleClass("in");
+			 	$(".nav>li").not(this).children("a").removeClass("active");
+			 	$(this).children("a").toggleClass("active");
+			 })
+		})
+	</script>	
+	</body>
+</html>

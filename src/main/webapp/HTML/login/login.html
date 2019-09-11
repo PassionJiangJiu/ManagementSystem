@@ -39,27 +39,57 @@
 <body>
     <div class="dowebok">
         <div class="logo"></div>
-        <div class="form-item">
-            <input id="username" type="text" autocomplete="off" placeholder="帐号">
-            <p class="tip">请输入合法的帐号信息</p>
-        </div>
-        <div class="form-item">
-            <input id="password" type="password" autocomplete="off" placeholder="登录密码">
-            <p class="tip">帐号或密码不正确</p>
-        </div>
-        <div class="form-item"><button id="submit">登 录</button></div>
-        <div class="reg-bar">
-<!--            <a class="reg" href="javascript:">立即注册</a>-->
-<!--            <a class="forget" href="javascript:">忘记密码</a>-->
-        </div>
+        <form class="login-form"  method="post">
+            <div class="form-item">
+                <input id="username" name="username" type="text" autocomplete="off" placeholder="帐号">
+            </div>
+            <div class="form-item">
+                <input id="password" name="password" type="password" autocomplete="off" placeholder="登录密码">
+                <p class="tip">帐号或密码不正确</p>
+            </div>
+            <div class="form-item"><button type="submit" id="submit">登 录</button></div>
+            <div class="reg-bar">
+                <!--            <a class="reg" href="javascript:">立即注册</a>-->
+                <!--            <a class="forget" href="javascript:">忘记密码</a>-->
+            </div>
+        </form>
+
     </div>
 
     <script src="images/jquery.min.js"></script>
     <script>
         $(function () {
-            $('input').val('')
-            $('#submit').on('click', function () {
-                $('.tip').show()
+            // $('input').val('')
+            // $('#submit').on('click', function () {
+            //     $('.tip').show()
+            // }
+            $(".login-form").on("submit",function (e) {
+                e.preventDefault();
+                var formdata=$(this).serialize();
+                $.ajax({
+                    url:'http://localhost:8080/system/login',
+                    type:'post',
+                    data:formdata,
+                    dataType:"json",
+                    //从后端拿数据
+                    success:function (data) {
+                        console.log(data)
+                        if(data.type==="success"){
+                            if(data.usertype==="staff"){
+                                window.location.href='frame0.html';
+                            }
+                            else if(data.usertype==="adm"){
+                                window.location.href='../body/frame1html';
+                            }
+                            else if(data.usertype==="superadm"){
+                                window.location.href='../body/frame.html';
+                            }
+                        }else if(data.type==="error"){
+                            $('.tip').show()
+                        }
+
+                    }
+                })
             })
         })
     </script>
