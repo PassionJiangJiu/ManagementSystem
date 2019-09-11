@@ -8,10 +8,7 @@ import com.service.StaffsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,11 +17,42 @@ public class StaffsConroller {
     @Autowired
     StaffsService staffsService;
 
-    @RequestMapping("/checkid")
-    public Msg checkid(String staffid){
-        staffsService.checkId
+
+    @ResponseBody
+    @RequestMapping(value = "staff/{staffid}")
+    public Msg deleteStaffById(@PathVariable("staffid") String staffid){
+        staffsService.deleteStaff(staffid);
+
+        return Msg.success();
     }
 
+    /**
+     * 员工更新方法
+     * @param staffs
+     * @return
+     */
+    @RequestMapping(value = "/staff/{staffid}",method = RequestMethod.PUT)
+    @ResponseBody
+    public Msg updateStaff(Staffs staffs){
+        staffsService.updateStaff(staffs);
+
+        return Msg.success();
+    }
+
+
+    /**
+     * 根据id查询员工
+     * @param staffid
+     * @return
+     */
+    @RequestMapping(value = "/staff/{staffid}", method = RequestMethod.GET)
+    @ResponseBody
+    public Msg getStaff(@PathVariable("staffid") String staffid){
+
+        Staffs staffs = staffsService.getStaff(staffid);
+        return Msg.success().add("staff",staffs);
+
+    }
 
 
     @RequestMapping(value = "staff",method = RequestMethod.POST)

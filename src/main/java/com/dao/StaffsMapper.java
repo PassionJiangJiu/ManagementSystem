@@ -5,7 +5,7 @@ import com.pojo.Staffs;
 import java.util.List;
 
 public interface StaffsMapper {
-    int deleteByStaffID(Integer id);
+    int deleteByStaffID(String staffid);
 
     int insert(Staffs record);
 
@@ -18,6 +18,7 @@ public interface StaffsMapper {
 
     List<Staffs> selectByStaffIDWithALL();
 
-    Staffs selectOneByStaffIDWithAll(Staffs staffsid);
+    Staffs selectOneByStaffIDWithAll(String staffsid);
+
 
 }

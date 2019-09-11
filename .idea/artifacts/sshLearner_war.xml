@@ -8,7 +8,7 @@
       </options>
     </properties>
     <root id="archive" name="sshLearner.war">
-      <element id="artifact" artifact-name="sshLearner:war exploded" />
+      <element id="artifact" artifact-name="ManagementSystem" />
     </root>
   </artifact>
 </component>

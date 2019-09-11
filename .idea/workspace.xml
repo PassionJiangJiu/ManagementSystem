@@ -2,18 +2,29 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="sshLearner:war exploded" />
+      <artifact name="ManagementSystem" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d90debff-961b-420c-aefe-241245b34ad7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/HTML/login/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/path.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/sshLearner_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/sshLearner_war.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/sshLearner_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ManagementSystem.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/StaffsConroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/StaffsConroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/HTML/index/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HTML/index/Main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dao/StaffsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dao/StaffsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/StaffsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/StaffsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/StaffsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/StaffsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/StaffsConroller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sshLearner/HTML/index/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/sshLearner/HTML/index/Main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dao/StaffsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dao/StaffsMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/service/StaffsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/service/StaffsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/StaffsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/StaffsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sshLearner/WEB-INF/classes/com/controller/StaffsConroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/sshLearner/WEB-INF/classes/com/controller/StaffsConroller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sshLearner/WEB-INF/classes/com/dao/StaffsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/sshLearner/WEB-INF/classes/com/dao/StaffsMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sshLearner/WEB-INF/classes/com/service/StaffsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/sshLearner/WEB-INF/classes/com/service/StaffsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sshLearner/WEB-INF/classes/mapper/StaffsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/sshLearner/WEB-INF/classes/mapper/StaffsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sshLearner/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/sshLearner/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/sshLearner/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/sshLearner/index.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,10 +69,16 @@
         <option value="Jsp File" />
         <option value="jsf" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
@@ -85,9 +102,9 @@
     <property name="last_opened_file_path" value="C:/Program Files/Git/cmd/git.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
@@ -99,11 +116,11 @@
       <recent name="C:\Users\10259\Desktop\sshLearner\src\main\webapp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\10259\Desktop\sshLearner\ManagementSystem\src\main\webapp\HTML" />
       <recent name="C:\Users\10259\Desktop\sshLearner\ManagementSystem\src\main\webapp\HTML\login" />
       <recent name="C:\Users\10259\Desktop\sshLearner\ManagementSystem\src\main\webapp\HTML\index" />
       <recent name="C:\Users\10259\Desktop\sshLearner\ManagementSystem\src\main\webapp" />
       <recent name="C:\Users\10259\Desktop\sshLearner\src\main\webapp" />
-      <recent name="C:\Users\10259\Desktop\sshLearner" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -169,7 +186,7 @@
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
-        <artifact name="sshLearner:war exploded">
+        <artifact name="ManagementSystem">
           <settings>
             <option name="CONTEXT_PATH" value="/sshLearner_war_exploded" />
           </settings>
@@ -239,14 +256,14 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="sshLearner:war exploded" />
+          <artifact name="ManagementSystem" />
         </option>
       </method>
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.45" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="sshLearner:war exploded">
+        <artifact name="ManagementSystem">
           <settings>
             <option name="CONTEXT_PATH" value="/sshLearner_war_exploded" />
           </settings>
@@ -311,7 +328,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="sshLearner:war exploded" />
+          <artifact name="ManagementSystem" />
           <artifact name="sshLearner:war" />
         </option>
       </method>
@@ -367,7 +384,10 @@
       <workItem from="1567991331552" duration="31974000" />
       <workItem from="1568074255698" duration="13268000" />
       <workItem from="1568093108031" duration="237000" />
-      <workItem from="1568093375219" duration="2863000" />
+      <workItem from="1568093375219" duration="4972000" />
+      <workItem from="1568100246735" duration="22286000" />
+      <workItem from="1568123071451" duration="197000" />
+      <workItem from="1568160195815" duration="8981000" />
     </task>
     <task id="LOCAL-00001" summary="2019/9/10/8：24">
       <created>1568075094779</created>
@@ -383,7 +403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568093181589</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2019/9/10/14:30">
+      <created>1568097020196</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1568097020197</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,6 +432,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2019/9/10/8：24" />
     <MESSAGE value="2019/9/10/13：25" />
-    <option name="LAST_COMMIT_MESSAGE" value="2019/9/10/13：25" />
+    <MESSAGE value="2019/9/10/14:30" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019/9/10/14:30" />
   </component>
 </project>

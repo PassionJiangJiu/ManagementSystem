@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="sshLearner:war exploded">
+  <artifact type="exploded-war" name="ManagementSystem">
     <output-path>$PROJECT_DIR$/target/sshLearner</output-path>
     <properties id="maven-jee-properties">
       <options>

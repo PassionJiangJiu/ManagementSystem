@@ -90,9 +90,9 @@
     where StaffID = #{staffsid,jdbcType=INTEGER}
   </select>
 
-  <delete id="deleteByStaffID" parameterType="java.lang.Integer" >
+  <delete id="deleteByStaffID" parameterType="java.lang.String" >
     delete from staffs
-    where StaffID = #{staffsid,jdbcType=INTEGER}
+    where StaffID = #{staffsid,jdbcType=VARCHAR}
   </delete>
   <insert id="insert" parameterType="com.pojo.Staffs" >
     insert into staffs (ID, StaffID, StaffName, 

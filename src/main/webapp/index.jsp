@@ -19,6 +19,139 @@
 </head>
 <body>
 
+
+
+<!-- 员工修改模态框 -->
+<div class="modal fade" id="staffUpdateModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" >员工修改</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label  class="col-sm-2 control-label">员工ID</label>
+                        <div class="col-sm-10">
+                            <p class="form-control-static" id="staffid_update_static"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-sm-2 control-label">员工姓名</label>
+                        <div class="col-sm-10">
+                            <p class="form-control-static" id="staffname_update_static"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-sm-2 control-label">性别</label>
+                        <div class="col-sm-10">
+                            <label class="radio-inline">
+                                <input type="radio" name="sexid" id="sex1_update_input" value="1" checked="checked"> 男
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="sexid" id="sex2_update_input" value="2"> 女
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-sm-2 control-label">岗位</label>
+                        <div class="col-sm-4">
+                            <%--                            岗位提交岗位id即可--%>
+                            <select class="form-control" name="jobid" id="job_update_select">
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label  class="col-sm-2 control-label">职称</label>
+                        <div class="col-sm-4">
+                            <%--                            岗位提交岗位id即可--%>
+                            <select class="form-control" name="gradeid" id="grade_update_select">
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label  class="col-sm-2 control-label">学历</label>
+                        <div class="col-sm-4">
+                            <%--                            岗位提交岗位id即可--%>
+                            <select class="form-control" name="edubackgroundid" id="edubackground_update_select">
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label  class="col-sm-2 control-label">生日</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="birthday" class="form-control" id="birthday_update_input" placeholder="XXXX.XX.XX">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label  class="col-sm-2 control-label">籍贯</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="nativeplace" class="form-control" id="nativeplace_update_input" placeholder="XX省XX市">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">地址</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="familyaddress" class="form-control" id="familyaddress_update_input" placeholder="XX省XX市XX区XX小区">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label  class="col-sm-2 control-label">身份证</label>
+                        <div class="col-sm-10">
+                            <p class="form-control-static" id="idcard_update_static"></p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label  class="col-sm-2 control-label">电话</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="tel" class="form-control" id="tel_update_input" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label  class="col-sm-2 control-label">专业</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="major" class="form-control" id="major_update_input" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label  class="col-sm-2 control-label">入职时间</label>
+                        <div class="col-sm-10">
+                            <p class="form-control-static" id="employeddate_update_static"></p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label  class="col-sm-2 control-label">薪水(元)</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="salary" class="form-control" id="salary_update_input" placeholder="">
+                        </div>
+                    </div>
+
+
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="staff_update_btn">更新</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- 员工添加模态框 -->
 <div class="modal fade" id="staffAddModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -99,7 +232,7 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label">地址</label>
                         <div class="col-sm-10">
-                            <input type="text" name="familyaddress" class="form-control" id="familyaddressaddress_add_input" placeholder="XX省XX市XX区XX小区">
+                            <input type="text" name="familyaddress" class="form-control" id="familyaddress_add_input" placeholder="XX省XX市XX区XX小区">
                         </div>
                     </div>
 
@@ -163,7 +296,7 @@
     <div class="row">
         <div class="col-md-4 col-md-offset-8">
             <button class="btn btn-primary" id="staff_add_model_btn">新增</button>
-            <button class="btn btn-danger">删除</button>
+<%--            <button class="btn btn-danger" id="staff_delete_all_btn">删除</button>--%>
         </div>
     </div>
     <!--    显示表格数据-->
@@ -172,6 +305,9 @@
             <table class="table table-hover" id="staffs_table">
                 <thead>
                 <tr>
+                    <th>
+                        <input type="checkbox" id="check_all"/>
+                    </th>
                     <th>#</th>
                     <th>职工ID</th>
                     <th>姓名</th>
@@ -209,7 +345,7 @@
 
 </div>
 <script type="text/javascript">
-    var totalRecord;
+    var totalRecord, currentPage;
     //页面加载完成以后，直接发送一个Ajax请求，要到分页数据
     $(function () {
         //去首页
@@ -237,13 +373,14 @@
         $("#staffs_table tbody").empty();
         var staffs = result.extend.PageInfo.list;
         $.each(staffs,function (index,item) {
+            var checkBoxTd = $("<td><input type = 'checkbox' class = 'check_item'/></td>");
             var idTd = $("<td></td>").append(item.id);
             var staffIdTd = $("<td></td>").append(item.staffid);
             var staffNameTd = $("<td></td>").append(item.staffname);
             var sexsTd = $("<td></td>").append(item.sexs.sexname);
             var jobsTd = $("<td></td>").append(item.jobs.jobname);
             var gradesTd = $("<td></td>").append(item.grades.gradename);
-            var eduBackgroundsTd = $("<td></td>").append(item.eduBackgrounds.eduBackgroundname);
+            var eduBackgroundsTd = $("<td></td>").append(item.eduBackgrounds.edubackgroundname);
             var birthdayTd = $("<td></td>").append(item.birthday);
             var nativeplaceTd = $("<td></td>").append(item.nativeplace);
             var familyaddressTd = $("<td></td>").append(item.familyaddress);
@@ -252,13 +389,21 @@
             var majorTd = $("<td></td>").append(item.major);
             var employeddateTd = $("<td></td>").append(item.employeddate);
             var salaryTd = $("<td></td>").append(item.salary);
-            var editBtn = $("<button></button>").addClass("btn btn-primary btn-sm")
+
+            var editBtn = $("<button></button>").addClass("btn btn-primary btn-sm edit_btn")
                             .append($("<span></span>").addClass("glyphicon glyphicon-pencil")).append("编辑");
-            var delBtn = $("<button></button>").addClass("btn btn-danger btn-sm")
+            //为编辑按钮添加一个自定义的属性，来表示当前员工的id
+            editBtn.attr("edit-id",item.staffid);
+
+            var delBtn = $("<button></button>").addClass("btn btn-danger btn-sm delete_btn")
                             .append($("<span></span>").addClass("glyphicon glyphicon-trash")).append("删除");
+            //为删除按钮添加一个自定义的属性来表示当前删除的员工ID
+            delBtn.attr("del-id",item.staffid);
+
             var btnTd = $("<td></td>").append(editBtn).append(" ").append(delBtn);
             // append方法执行完成后返回原来的元素
-            $("<tr></tr>").append(idTd)
+            $("<tr></tr>").append(checkBoxTd)
+                .append(idTd)
                 .append(staffIdTd)
                 .append(staffNameTd)
                 .append(sexsTd)
@@ -285,6 +430,7 @@
                                                 +result.extend.PageInfo.pages+"页,总"
                                                 +result.extend.PageInfo.total+"条记录");
             totalRecord = result.extend.PageInfo.total+1;
+            currentPage = result.extend.PageInfo.pageNum;
     }
     // 解析显示分页条
     function build_page_nav(result) {
@@ -346,16 +492,18 @@
     //点击新增按钮弹出模态框
     $("#staff_add_model_btn").click(function () {
         //发送ajax请求，显示出部门信息，显示再下拉列表中
-        getJobs();
-        getGrades();
-        getEduBackground();
+        getJobs("#job_add_select");
+        getGrades("#grade_add_select");
+        getEduBackground("#edubackground_add_select");
         //弹出模态框
         $("#staffAddModel").modal({
             backdrop:"static"
         });
     });
     //查出岗位信息并显示在下拉列表中
-    function getJobs() {
+    function getJobs(ele) {
+        //清空下拉列表的值
+        $(ele).empty();
         $.ajax({
             url:"${APP_PATH}/jobs",
             type:"GET",
@@ -364,14 +512,16 @@
                 $("#job_add_select");
                 $.each(result.extend.jobs,function () {
                     var optionEle = $("<option></option>").append(this.jobname).attr("value",this.jobid);
-                    optionEle.appendTo("#job_add_select");
+                    optionEle.appendTo(ele);
                 })
             }
 
         })
     }
     //查出职称信息并显示在下拉列表中
-    function getGrades() {
+    function getGrades(ele) {
+        //清空下拉列表的值
+        $(ele).empty();
         $.ajax({
             url:"${APP_PATH}/grades",
             type:"GET",
@@ -380,14 +530,16 @@
                 $("#grade_add_select");
                 $.each(result.extend.grades, function () {
                     var optionEle = $("<option></option>").append(this.gradename).attr("value",this.gradeid);
-                    optionEle.appendTo("#grade_add_select");
+                    optionEle.appendTo(ele);
                 })
             }
 
         })
     }
     //查出学历信息并显示在下拉列表中
-    function getEduBackground() {
+    function getEduBackground(ele) {
+        //清空下拉列表的值
+        $(ele).empty();
         $.ajax({
             url:"${APP_PATH}/eduBackgrounds",
             type:"GET",
@@ -396,7 +548,7 @@
                 $("#edubackground_add_select");
                 $.each(result.extend.eduBackgrounds,function () {
                     var optionEle = $("<option></option>").append(this.edubackgroundname).attr("value",this.edubackgroundid);
-                    optionEle.appendTo("#edubackground_add_select");
+                    optionEle.appendTo(ele);
                 })
             }
 
@@ -419,7 +571,7 @@
 
 
         if(!regname.test(staffname)){
-            alert("员工姓名格式不正确");
+            alert("员工姓名格式不正确或重复");
             return false;
         }
 
@@ -428,7 +580,7 @@
 
 
         if(!regidcard.test(idcard)){
-            alert("身份证位数不正确");
+            alert("身份证位数不正确或重复");
             return false;
         }
 
@@ -444,15 +596,9 @@
 
 
 
-        return false;
+        return true;
     }
-    //检验用户名是否可用
-    $("#staffid_add_input").change(function () {
-        //发送ajax请求校验用户名是否可用
 
-
-
-    })
 
     //点击保存，保存员工
     $("#staff_save_btn").click(function() {
@@ -470,15 +616,128 @@
             success:function (result) {
                 // alert(result.msg);
                 // 1.关闭模态框
-                $("#staffAddModel").modal('hide')
+                $("#staffAddModel").modal('hide');
                 // 来到最后一页显示刚才保存的数据
                 // 发送ajax请求显示最后一页
                 to_page(totalRecord);
             }
         });
         // alert($("#staffAddModel form").serialize());
+    });
+
+    //单个删除
+    $(document).on("click",".delete_btn",function () {
+        //1.弹出确认删除对话框
+        var staffName = $(this).parents("tr").find("td:eq(3)").text();
+        var staffId = $(this).attr("del-id");
+
+        if(confirm("确认删除【"+staffName+"】吗？")){
+            //确认，发送ajax请求删除即可
+            $.ajax({
+                url:"${APP_PATH}/staff/"+staffId,
+                type:"DELETE",
+                success:function (result) {
+                    // alert(result.msg);
+                    to_page(currentPage);
+                }
+            });
+        }
+    });
+
+
+
+    //修改功能
+    $(document).on("click",".edit_btn",function () {
+        // alert("edit");
+        // 查出下拉框信息
+        getJobs("#job_update_select");
+        getGrades("#grade_update_select");
+        getEduBackground("#edubackground_update_select");
+
+        //查出员工信息，显示
+        getStaff($(this).attr("edit-id"));
+
+        //把员工的staffid传递给模态框的更新按钮
+        $("#staff_update_btn").attr("edit-id",$(this).attr("edit-id"));
+
+        $("#staffUpdateModel").modal({
+            backdrop:"static"
 
     });
+    });
+    
+    function getStaff(staffid) {
+        $.ajax({
+            url:"${APP_PATH}/staff/"+staffid,
+            type:"GET",
+            success:function (result) {
+                console.log(result);
+                //使修改表单初始数据是原始数据
+                var staffData = result.extend.staff;
+                //静态表单 员工id 员工姓名 身份证 入职时间
+                $("#staffid_update_static").text(staffData.staffid);
+                $("#staffname_update_static").text(staffData.staffname);
+                $("#idcard_update_static").text(staffData.idcard);
+                $("#employeddate_update_static").text(staffData.employeddate);
+                //性别
+                $("#staffUpdateModel input[name = sexid]").val([staffData.sexid]);
+                //下拉表单 岗位 职称 学历
+                $("#staffUpdateModel select[name = jobid]").val([staffData.jobid]);
+                $("#staffUpdateModel select[name = gradeid]").val([staffData.gradeid]);
+                $("#staffUpdateModel select[name = edubackgroundid]").val([staffData.edubackgroundid]);
+                //可修改文本表单 生日 籍贯 地址 电话 专业 薪水
+                $("#birthday_update_input").val(staffData.birthday);
+                $("#nativeplace_update_input").val(staffData.nativeplace);
+                $("#familyaddress_update_input").val(staffData.familyaddress);
+                $("#tel_update_input").val(staffData.tel);
+                $("#major_update_input").val(staffData.major);
+                $("#salary_update_input").val(staffData.salary);
+
+            }
+        });
+    }
+
+    //点击更新按钮，更新员工信息
+    $("#staff_update_btn").click(function () {
+        //1.验证合法性
+        var tel = $("#tel_update_input").val();
+        var regtel = /^[0-9]{11,15}$/;
+
+        if(!regtel.test(tel)){
+            alert("电话格式不正确");
+            return false;
+        }
+
+        //2.发送ajax请求保存更新的员工数据
+        $.ajax({
+            url:"${APP_PATH}/staff/"+$(this).attr("edit-id"),
+            type:"PUT",
+            data:$("#staffUpdateModel form").serialize(),
+            success:function (result) {
+                // alert(result.msg);
+                //1.关闭对话框
+                $("#staffUpdateModel").modal("hide");
+                //2.回到本界面
+                to_page(currentPage);
+            }
+        });
+    });
+    //完成全选/全不选功能
+    $("#check_all").click(function () {
+        //attr获取checked时是undefined
+        //prop获取原生值，attr获取自定义值
+        //prop修改和读取dom原生属性的值
+        // alert($(this).prop("checked"));
+        $(".check_item").prop("checked",$(this).prop("checked"));
+    });
+
+    //check_item
+    $(document).on("click",".check_item",function () {
+        //判断当前选中的元素值是否为5个
+        var flag = $(".check_item:checked").length==$(".check_item").length;
+        $("#check_all").prop("checked",flag);
+    });
+
 </script>
 </body>
 </html>
