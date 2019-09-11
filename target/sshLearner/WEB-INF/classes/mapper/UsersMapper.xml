@@ -5,21 +5,65 @@
     <id column="UserID" property="userid" jdbcType="INTEGER" />
     <result column="StaffID" property="staffid" jdbcType="VARCHAR" />
     <result column="Password" property="password" jdbcType="VARCHAR" />
-    <result column="UserType" property="usertype" jdbcType="VARCHAR" />
+    <result column="UserType" property="usertype" jdbcType="INTEGER" />
   </resultMap>
 
-  <select id="selectByStaffID" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select  Password, UserType
-    from users
-    where StaffID = #{staffid,jdbcType=INTEGER}
-  </select>
-<!--  <update id="updataPassword"-->
-  <insert id="insertUser" parameterType="com.pojo.Users">
-    insert into users
-      (StaffID,Password,UserType)
-      values
-      (#{staffid,jdbcType=VARCHAR},#{staffid,jdbcType=VARCHAR},1)
+  <sql id="Base_Column_List" >
+    UserID, StaffID, Password, UserType
+  </sql>
 
+  <!--查询用户信息 -->
+  <select id="selectByStaffID" resultMap="BaseResultMap" resultType="Users" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from users
+    where StaffID = #{staffid,jdbcType=VARCHAR}
+  </select>
+
+  <!--根据ID删除用户-->
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from users
+    where UserID = #{userid,jdbcType=INTEGER}
+  </delete>
+
+  <!--插入用户信息-->
+  <insert id="insert" parameterType="com.pojo.Users" >
+    insert into users (UserID, StaffID, Password,
+      UserType)
+    values (#{userid,jdbcType=INTEGER}, #{staffid,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
+      #{usertype,jdbcType=INTEGER})
+  </insert>
+
+  <insert id="insertSelective" parameterType="com.pojo.Users" >
+    insert into users
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="userid != null" >
+        UserID,
+      </if>
+      <if test="staffid != null" >
+        StaffID,
+      </if>
+      <if test="password != null" >
+        Password,
+      </if>
+      <if test="usertype != null" >
+        UserType,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="userid != null" >
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="staffid != null" >
+        #{staffid,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="usertype != null" >
+        #{usertype,jdbcType=INTEGER},
+      </if>
+    </trim>
   </insert>
 
 </mapper>

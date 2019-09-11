@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.DeptMapper" >
+    <resultMap id="BaseResultMap" type="com.pojo.Dept" >
+        <id column="DeptID" property="deptid" jdbcType="INTEGER" />
+        <result column="DeptName" property="deptname" jdbcType="VARCHAR" />
+        <result column="DeptStyle" property="deptstyle" jdbcType="VARCHAR" />
+        <result column="DeptMoney" property="deptmoney" jdbcType="VARCHAR" />
+        <result column="DeptCode" property="deptcode" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+    DeptID, DeptName, DeptStyle, DeptMoney,DeptCode
+  </sql>
+
+    <!--根据机构名字查询机构信息 -->
+    <select id="selectByDeptName" resultType="Dept" parameterType="java.lang.String" >
+        select
+        <include refid="Base_Column_List" />
+        from dept
+        where DeptName = #{deptname,jdbcType=VARCHAR}
+    </select>
+
+    <!--根据ID删除用户-->
+    <delete id="deleteByDeptID" parameterType="java.lang.Integer" >
+    delete from dept
+    where DeptID = #{deptid,jdbcType=INTEGER}
+  </delete>
+
+    <!--插入用户信息-->
+    <insert id="insert" parameterType="com.pojo.Dept" >
+    insert into dept ( DeptID, DeptName, DeptStyle,
+     DeptMoney,DeptCode)
+    values (#{deptid,jdbcType=INTEGER}, #{deptname,jdbcType=VARCHAR}, #{deptstyle,jdbcType=VARCHAR},
+      #{deptmoney,jdbcType=VARCHAR},#{deptcpde,jdbcType=VARCHAR})
+  </insert>
+
+    <insert id="insertSelective" parameterType="com.pojo.Dept" >
+        insert into users
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="deptid != null" >
+                DeptID,
+            </if>
+            <if test="deptname != null" >
+                DeptName,
+            </if>
+            <if test="deptstyle != null" >
+                DeptStyle,
+            </if>
+            <if test="deptmoney != null" >
+                DeptMoney,
+            </if>
+            <if test="deptcpde != null" >
+                DeptCode,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="deptid != null" >
+                #{deptid,jdbcType=INTEGER},
+            </if>
+            <if test="deptname != null" >
+                #{deptname,jdbcType=VARCHAR},
+            </if>
+            <if test="deptstyle != null" >
+                #{deptstyle,jdbcType=VARCHAR},
+            </if>
+            <if test="deptmoney != null" >
+                #{deptmoney,jdbcType=VARCHAR},
+            </if>
+            <if test="deptcpde != null" >
+                #{deptcpde,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="edit" parameterType="com.pojo.Dept" >
+    update dept
+    set DeptID = #{deptid,jdbcType=INTEGER},
+      DeptName = #{deptname,jdbcType=VARCHAR},
+      DeptStyle = #{deptstyle,jdbcType=VARCHAR},
+      DeptMoney = #{deptmoney,jdbcType=VARCHAR},
+      DeptCode = #{deptcode,jdbcType=VARCHAR},
+    where DeptID = #{deptid,jdbcType=INTEGER}
+  </update>
+
+    <select id="findList" parameterType="String" resultType="Dept">
+       select * from user where deptname like #{deptname}
+        limit #{offset},#{pageSize}
+    </select>
+</mapper>

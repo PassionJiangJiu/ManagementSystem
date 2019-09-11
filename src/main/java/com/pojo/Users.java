@@ -7,7 +7,7 @@ public class Users {
 
     private String password;
 
-    private String usertype;
+    private Integer usertype;
 
     public Integer getUserid() {
         return userid;
@@ -33,11 +33,11 @@ public class Users {
         this.password = password == null ? null : password.trim();
     }
 
-    public String getUsertype() {
+    public Integer getUsertype() {
         return usertype;
     }
 
-    public void setUsertype(String usertype) {
+    public void setUsertype(Integer usertype) {
         this.usertype = usertype;
     }
 }

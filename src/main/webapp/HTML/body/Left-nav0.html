@@ -6,20 +6,33 @@
 		<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<title>普通员工</title>
-		<style type="text/css">
-			ul{
-				width: 140px;
-				height: 200px;
-				float: left;
-				margin-top: 30px;
-				
-			}
-		</style>
+		
 	</head>
 	<body>
-	<ul class="nav nav-pills nav-stacked">
-			<li><a href="Contain0.html?" target="contain">员工管理</a></li>
-				
-		</ul>	
+	<div class="profile">
+	</div>
+	<ul class="nav">
+		<li ><a href="javascript:;"><i class="fa fa-user"></i>员工管理<i class="fa fa-angle-right"></i></a>
+			<ul class="collapse">
+				<!-- 在href处修改需跳转的页面即可-->
+				<li><a href="AddStaff.html" class="one" target="contain">员工填写</a></li>
+				<li><a href="ShowStaff.html" class="second" target="contain">员工查看</a></li>						
+			</ul>
+		</li>
+		
+	
+	</ul>
+	<!-- <script src="../../骚扰c/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script> -->
+	<script type="text/javascript">
+		$(function($){
+			
+			 $(".nav>li").on("click",function(){
+			 	$(".nav>li").not(this).children("ul").removeClass("in");
+			 	$(this).children("ul").toggleClass("in");
+			 	$(".nav>li").not(this).children("a").removeClass("active");
+			 	$(this).children("a").toggleClass("active");
+			 })
+		})
+	</script>
 	</body>
 </html>

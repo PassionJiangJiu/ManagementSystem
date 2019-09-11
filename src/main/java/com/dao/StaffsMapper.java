@@ -11,7 +11,6 @@ public interface StaffsMapper {
 
     int insertSelective(Staffs record);
 
-
     int updateByStaffIDSelective(Staffs record);
 
     int updateByStaffID(Staffs record);

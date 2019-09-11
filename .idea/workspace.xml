@@ -7,28 +7,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d90debff-961b-420c-aefe-241245b34ad7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/HTML/index/Main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/HTML/index/jquery.sly.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/HTML/index/load.SLY.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/HTML/index/loader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4d2a272b-f5ac-4312-bf55-26f94b645e40.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4d2a272b-f5ac-4312-bf55-26f94b645e40.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/HTML/body/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/HTML/body/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/HTML/body/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/HTML/body/ShowStaff.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/HTML/body/UpadteStaff.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/HTML/body/beijing.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/HTML/body/statistics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/sshLearner_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/sshLearner_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/DeptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/DeptController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dao/DeptMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dao/DeptMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dao/StaffsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dao/StaffsMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dao/UsersMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dao/UsersMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pojo/Dept.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pojo/Dept.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pojo/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pojo/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/StaffsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/StaffsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/StaffsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/StaffsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/DeptService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/DeptService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/impl/DeptServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/impl/DeptServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/DeptMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DeptMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UsersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UsersMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/HTML/body/Left-nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HTML/body/Left-nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/HTML/body/Left-nav0.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HTML/body/Left-nav0.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/HTML/body/Left-nav1.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HTML/body/Left-nav1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/HTML/body/frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HTML/body/frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/HTML/body/frame0.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HTML/body/frame0.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/HTML/body/frame1.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HTML/body/frame1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/HTML/body/inform.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HTML/body/inform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/HTML/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HTML/login/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/HTML/login/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HTML/login/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index-2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index-2.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sshLearner.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sshLearner.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/sshLearner.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/dao/UsersMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dao/UsersMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pojo/Msg.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pojo/Msg.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/pojo/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pojo/Users.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/service/StaffsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/service/StaffsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/StaffsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/StaffsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/UsersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/UsersMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sshLearner/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/sshLearner/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/sshLearner/WEB-INF/classes/com/dao/UsersMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/sshLearner/WEB-INF/classes/com/dao/UsersMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sshLearner/WEB-INF/classes/com/pojo/Msg.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/sshLearner/WEB-INF/classes/com/pojo/Msg.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/sshLearner/WEB-INF/classes/com/pojo/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/sshLearner/WEB-INF/classes/com/pojo/Users.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/sshLearner/WEB-INF/classes/com/service/StaffsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/sshLearner/WEB-INF/classes/com/service/StaffsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sshLearner/WEB-INF/classes/mapper/StaffsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/sshLearner/WEB-INF/classes/mapper/StaffsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sshLearner/WEB-INF/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/sshLearner/WEB-INF/classes/jdbc.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/sshLearner/WEB-INF/classes/mapper/UsersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/sshLearner/WEB-INF/classes/mapper/UsersMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sshLearner/WEB-INF/classes/spring/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/sshLearner/WEB-INF/classes/spring/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sshLearner/index-2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/sshLearner/index-2.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/sshLearner/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/sshLearner/index.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,6 +105,8 @@
       <list>
         <option value="Jsp File" />
         <option value="jsf" />
+        <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -97,7 +132,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="ignore_missing_gitignore" value="true" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/cmd/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -107,14 +142,22 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\10259\Desktop\sshLearner\ManagementSystem\src\main\webapp\HTML\index" />
-      <recent name="C:\Users\10259\Desktop\sshLearner\ManagementSystem\src\main\webapp" />
-      <recent name="C:\Users\10259\Desktop\sshLearner\src\main\webapp" />
-      <recent name="C:\Users\10259\Desktop\sshLearner" />
+      <recent name="F:\Code_Lurawh\ManagementSystem\src\main\webapp\HTML\body" />
+      <recent name="F:\Code_Lurawh\ManagementSystem\src\main\webapp\HTML\index" />
+      <recent name="F:\Code_Lurawh\ManagementSystem\src\main\webapp\HTML\login" />
+      <recent name="F:\Code_Lurawh\ManagementSystem\src\main\webapp" />
+      <recent name="F:\Code_Lurawh\ManagementSystem\src\main\webapp\HTML" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\10259\Desktop\sshLearner\src\main\java\com\service" />
-      <recent name="C:\Users\10259\Desktop\sshLearner\src\main\webapp" />
+      <recent name="F:\Code_Lurawh\ManagementSystem\src\main\webapp\HTML\body" />
+      <recent name="F:\Code_Lurawh\Git\ManagementSystem\src\main\webapp\HTML\index" />
+      <recent name="F:\Code_Lurawh\Git\ManagementSystem\src\main\webapp\HTML\body" />
+      <recent name="F:\Code_Lurawh\Git\ManagementSystem\src\main\webapp\HTML\login" />
+      <recent name="F:\Code_Lurawh\Git\ManagementSystem\src\main\webapp\HTML" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.service.impl" />
+      <recent name="com.service" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.service" />
@@ -179,12 +222,13 @@
       <method v="2" />
     </configuration>
     <configuration name="Tomcat 8.5.45" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.45" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
         <artifact name="sshLearner:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/sshLearner_war_exploded" />
+            <option name="CONTEXT_PATH" value="" />
           </settings>
         </artifact>
       </deployment>
@@ -455,6 +499,10 @@
       <workItem from="1567987383913" duration="544000" />
       <workItem from="1567991331552" duration="31974000" />
       <workItem from="1568074255698" duration="13268000" />
+      <workItem from="1568097628019" duration="32432000" />
+      <workItem from="1568160361831" duration="604000" />
+      <workItem from="1568163604801" duration="50000" />
+      <workItem from="1568167348218" duration="627000" />
     </task>
     <task id="LOCAL-00001" summary="2019/9/10/8：24">
       <created>1568075094779</created>
@@ -485,5 +533,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2019/9/10/8：24" />
     <option name="LAST_COMMIT_MESSAGE" value="2019/9/10/8：24" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ManagementSystem$Tomcat_8_5_45.ic" NAME="Tomcat 8.5.45 Coverage Results" MODIFIED="1568109955137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
